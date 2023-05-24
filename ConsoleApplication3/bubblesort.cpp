@@ -6,7 +6,7 @@
 
 
 
-#define MAX 8*10
+const int MAX = 8 * 100;
 
 
 pthread_barrier_t barrier;
@@ -222,6 +222,7 @@ int main() {
 	int copy3[MAX];
 	std::copy(&matrix[0], &matrix[0] + MAX, &copy3[0]);
 	paralel_calistir_openmp(copy3);
+
 	std::cout << "Dizi (Sonra): ";
 	yazdir(copy3, MAX);
 
